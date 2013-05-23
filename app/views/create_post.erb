@@ -1,0 +1,15 @@
+<h1>Write a post:</h1>
+<% if @post %>
+  <p>
+  <% @post.errors.full_messages.each do |error| %>
+    <%= error %>.<br><br>
+  <% end %>
+  </p>
+<% end %>
+<form action='/post/new' method='post'>
+  <input type="text" name="title" placeholder='Title' required><br><br>
+  <input type="text" name="url" placeholder="Copy url here"><br>
+  <p>or</p>
+  <textarea name="content" placeholder='Write here!' cols='20' rows='10'></textarea><br>
+  <input type="submit" value="Publish">
+</form> 

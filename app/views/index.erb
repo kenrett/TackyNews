@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Welcome to TackyNews!</h1>
+  <ul class="post">
+  <% Post.all.each do |p| %>
+    <li>
+      <% if p.url %>
+        <a href=<%= url %>><%= p.title %></a>
+      <% else %>
+        <a href='/post/view/<%= p.id %>'><%= p.title %></a>
+      <% end %>
+      
+      <ul>
+        <li>
+        <a href="/post/view/<%= p.id %>">
+          <% if p.comments.length > 0 %>
+            <%= p.comments.length %> Comments
+          <% else %>
+            No Comments Yet (Be the first!)
+          <% end %>
+        </a>  
+        </li>
+        <li>
+        <a href="/user/profile/<%= p.user.username  %>"><%= p.user.username  %></a>  
+        </li>
+      </ul>
+    </li>
+  <% end %>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<p>Posts</p>
+<ul>
+<% @user.posts.each do |p| %>
+  <li><a href="/post/view/<%= p.id%>"><%= p.title %></a></li><br>
+<% end %>
+</ul>
+
+<p>Comments</p>
+
+<ul>
+<% @user.comments.each do |c| %>
+  <li><%= c.content %>
+    <ul>
+      <li><%= c.post.title %></li>
+    </ul>
+  </li>
+  <br>
+<% end %>
+<ul>

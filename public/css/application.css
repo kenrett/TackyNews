@@ -1,0 +1,54 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.post {
+  padding: 0;
+  background-color: #ccc;
+  border: 1px solid black;
+}
+
+.post li {
+  list-style-type: none;
+  width: 598px;
+}
+
+.post li + li {
+  border-top: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  background-color: #ff6600;
+  width: 85%;
+  margin: 10px auto;
+  height: 35px;
+}
+
+.navbar li {
+  display: inline;
+  padding-right: 20px;
+
+}
+
+.navbar li + li {
+  border-left: 1px solid black;
+  padding-left: 20px;
+}
+
+#logo {
+  border: 1px solid white;
+  width: 15px;
+  text-align: center;
+  color: white;
+}
